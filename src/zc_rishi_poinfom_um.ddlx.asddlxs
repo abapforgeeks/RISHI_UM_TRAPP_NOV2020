@@ -1,0 +1,52 @@
+@Metadata.layer: #CORE
+@UI.headerInfo:{ 
+
+title:{ value:'po_description',type: #STANDARD }
+}
+annotate view ZC_RISHI_POINFO_UM
+    with 
+{
+  @UI.facet: [
+{
+
+id:'Purchaseinfo',
+purpose: #STANDARD,
+type:#IDENTIFICATION_REFERENCE,
+label: 'Purchase Info'
+ },
+ { 
+ 
+ id:'PurchaseItems',
+ purpose: #STANDARD,
+ type: #LINEITEM_REFERENCE,
+ label:'Purchase Items',
+ targetElement: '_Items'
+ }
+
+]
+  @UI.identification: [{ position: 9,label: 'Purchase Document' }]
+  @UI.lineItem: [{ position: 10 }]
+  po_doc;
+  @UI.identification: [{ position: 10,label: 'Purchase Desc' }]
+  @UI.lineItem: [{ position: 20 }]
+  po_description;
+  @UI.identification: [{ position: 20,label: 'Purchase Status' }]
+  @UI.lineItem: [{ position: 30 }]
+  postatus;
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{ position: 30,label: 'Purchase Priority' }]
+  popriority;
+  @UI.lineItem: [{ position: 50 }]
+  @UI.identification: [{ position: 40,label: 'Company Code' }]
+  compcode;
+  @UI.identification: [{ position: 50,label: 'Total Price' }]
+  @UI.lineItem: [{ position: 60 }]
+  total_poprice;
+  @UI.identification: [{ position: 60,label: 'Currency' }]
+  @UI.lineItem: [{ position: 70 }]
+  curkey;
+  @UI.identification: [{ position:70,label:'Last Changed on' }]
+  changed_on;
+ 
+    
+}

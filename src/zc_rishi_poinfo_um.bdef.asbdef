@@ -1,0 +1,17 @@
+projection;
+
+define behavior for ZC_RISHI_POINFO_UM //alias <alias_name>
+use etag
+{
+  use create;
+  use update;
+  use delete;
+
+  use association _Items { create; }
+}
+
+define behavior for ZC_RISHI_POITEMS_UM //alias <alias_name>
+{
+  use update;
+  use delete;
+}

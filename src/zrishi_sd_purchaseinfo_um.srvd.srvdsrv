@@ -1,0 +1,7 @@
+@EndUserText.label: 'unmanaged service definition for PO'
+define service Zrishi_sd_purchaseinfo_um {
+  expose ZI_RISHI_POINFO_UM;
+  expose ZI_RISHI_POITEMS_UM;
+  expose ZC_RISHI_POINFO_UM;
+  expose ZC_RISHI_POITEMS_UM;
+}

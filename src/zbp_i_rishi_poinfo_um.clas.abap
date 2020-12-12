@@ -1,0 +1,5 @@
+CLASS zbp_i_rishi_poinfo_um DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_rishi_poinfo_um.
+ENDCLASS.
+
+CLASS zbp_i_rishi_poinfo_um IMPLEMENTATION.
+ENDCLASS.

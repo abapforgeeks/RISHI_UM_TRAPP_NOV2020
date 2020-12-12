@@ -1,0 +1,24 @@
+unmanaged implementation in class zbp_i_rishi_poinfo_um unique;
+define behavior for ZI_RISHI_POINFO_UM alias PurchaseInfo
+etag master changed_on
+{
+  field(readonly) createby,created_on;
+  field(readonly:update) po_doc;
+  create;
+  update;
+  delete;
+  association _Items { create; }
+
+//  mapping for zrishi_poinfo
+//  {
+//  purchasedoc = po_doc;
+//
+//  }
+}
+
+define behavior for ZI_RISHI_POITEMS_UM alias PurchaseItems
+{
+  field(readonly) po_document,po_item;
+  update;
+  delete;
+}
